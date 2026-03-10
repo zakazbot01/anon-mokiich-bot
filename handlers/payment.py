@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 router = Router()
 
 # Цена теперь фиксирована 77 звёзд (можно оставить в config, но для примера переопределим здесь)
-PREMIUM_PRICE_STARS = 77  # ← твоя новая цена
+PREMIUM_PRICE_STARS = 299  # ← твоя новая цена
 
 
 @router.callback_query(F.data == "buy_premium")
@@ -101,4 +101,5 @@ async def successful_payment(message: Message):
         "• Полная анонимность для тех, кто пишет вам\n"
         "• Поддержка проекта и будущие крутые фичи\n\n"
         "Спасибо огромное! ✨"
+
     )
